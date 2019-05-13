@@ -1,0 +1,12 @@
+- hosts: all
+  tasks:
+  - name: Ansible create multiple files example
+    file:
+      path: "/home/ec2-user/{{ item }}"
+      state: touch
+      mode: 0775
+    with_items:
+    - access.log
+    - systemd.log
+    - properties.txt
+    - conffile.conf

@@ -1,0 +1,15 @@
+---
+- hosts: nodes
+  become: yes
+  gather_facts: False
+  tasks:
+    - name: Installing git
+      yum:
+        name: git
+        state: present
+      tags: install
+    - name: uninstall git
+      yum:
+        name: git
+        state: absent
+      tags: uninstall

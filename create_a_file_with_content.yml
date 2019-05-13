@@ -1,0 +1,10 @@
+---
+- hosts: nodes
+  tasks:
+  - name: Create file with content example
+    copy:
+      dest: "/home/ec2-user/task2File.txt"
+      content: |
+        Madhu Sudhan Reddy
+        Banglore
+        DevOps Architech

@@ -1,0 +1,10 @@
+---
+- hosts: 172.31.16.196
+  become: yes
+  vars_files:
+    - /etc/ansible/group_vars/mail/vault.yml
+    - /etc/ansible/group_vars/mail/vars.yml
+  tasks:	
+    - name: this is my name "{{ ename }}"
+      command: ls -lrt
+
