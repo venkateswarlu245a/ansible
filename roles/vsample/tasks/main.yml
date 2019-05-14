@@ -1,0 +1,6 @@
+---
+# tasks file for vsample
+- name: get the username
+  debug:
+   msg: "myname is {{ username }} "
+
